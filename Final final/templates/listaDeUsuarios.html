@@ -1,0 +1,15 @@
+{%extends 'base2.html'%}
+
+{%block content%}
+<h1>Usuarios</h1>
+
+  {%for use in gym%}
+  <tr>
+    <td>{{use.Nombres}}</td>
+  </tr>
+  {%empty%}
+    <li>No hay libros en existencia!</li>
+  {%endfor%}
+
+
+{%endblock %}

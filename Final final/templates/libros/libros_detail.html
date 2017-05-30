@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{%block content%}
+  <h1>{{mensaje}}</h1>
+  <h2 class="sub-header"></h2>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Nombre</th>
+          <th>Autor</th>
+          <th>ISBN</th>
+          <th>Precio</th>
+        </tr>
+    <tr>
+     <td>{{libros.id}}</td>
+     <td>{{libros.Nombre}}</td>
+     <td>{{libros.Autor}}</td>
+     <td>{{libros.ISBN}}</td>
+     <td>{{libros.Precio}}</td>
+    </tr>
+
+</thead>
+<p><a class="btn btn-lg" href="http://127.0.0.1:8000/libros/{{libros.id}}/editar" role="button">Presione aquí para ver editar &raquo;</a></p>
+
+{%endblock%}

@@ -1,0 +1,39 @@
+{%extends 'base.html'%}
+
+{%block formsearch%}
+<form class="navbar-form navbar-right" method="GET" action"">
+    <input type="text" class="form-control" name=q placeholder="Busqueda Rapida">
+</form>
+{%endblock%}
+
+{%block content%}
+
+     {%for lib in object_list%}
+     <h2 class="sub-header"></h2>
+     <div class="table-responsive">
+       <table class="table table-striped">
+         <thead>
+           <tr>
+             <th>id</th>
+             <th>Nombre</th>
+             <th>Precio</th>
+             <th>Detalles</th>
+             <th>Editar</th>
+           </tr>
+
+       </thead>
+
+        <tr>
+        <td>{{lib.id}}</td>
+        <td>{{lib.Nombre}}</td>
+        <td>{{lib.Precio}}</td>
+        <td><a class="btn" href="http://127.0.0.1:8000/libros/{{lib.id}}/" role="button">ir &raquo;</a></td>
+        <td><a class="btn" href="http://127.0.0.1:8000/libros/{{lib.id}}/editar" role="button">ir &raquo;</a></td>
+
+       </tr>
+     </table>
+  {%empty%}
+    <h1>{{lib.slug}}</h1>
+  {%endfor%}
+
+{%endblock %}

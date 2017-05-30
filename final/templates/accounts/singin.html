@@ -1,0 +1,46 @@
+{% extends "base2.html" %}
+{% load static %}
+{%block content%}
+{% load static %}
+        <div class="top-content">
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <img src="../static/img/logo largo.png">
+                            <div class="description">
+                            	<p>¡Por fin te <strong style="color:#7ca1e4"x>decidiste a mejorar tu vida!</strong>, felicidades, estás dando un paso enorme para mejorar tu vida y nosotros seremos parte de este viaje contigo.
+                            	</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h2 style="color:#7ca1e4">¡Crea tu cuenta!</h2>
+                            		<p>Ingresa tus datos con los que te daras de alta.</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-lock"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+
+                      {%include "form0.html" with form=form submit_btn="Registrar"%}
+<br>
+<br>
+<a href="http://127.0.0.1:8000" align="center" style="color:#7ca1e4">Regresar a la página principal</a></h3>
+			                    </form>
+		                    </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{%endblock%}
+
+    </body>
+
+</html>

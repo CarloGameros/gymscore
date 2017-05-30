@@ -1,0 +1,60 @@
+{%extends 'base1.html'%}
+
+{%block busquedas%}
+          <form class="navbar-form navbar-right" action="." method="GET">
+            <input type="text" class="form-control" placeholder="Buscar..." name="q" value="{{ bs|escape }}">
+          </form>
+{%endblock%}
+
+{%block content%}
+<section class="bg-primary" id="about">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">¿Estas entre los mejores?</h2>
+            <hr class="light">
+            <p class="text-faded">En GymScore! nos interesa usar el metodo de competencia para que te motives viendo como te superas ¡y superas a todos!</p>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<h2 class="sub-header">Lista de Usuarios</h2>
+          <div class="table-responsive">
+            <table class="table table-striped">
+<thead></thead>
+                <tr>
+                  <th>id</th>
+                  <th>Nombre</th>
+                  <th>Apeidos</th>
+                  <th>Edad</th>
+                  <th>Peso</th>
+                  <th>Sexo</th>
+                </tr>
+              </thead>
+              <tbody>
+
+    <ul>
+  {%for use in object_list%}
+
+    <tr>
+      <td>{{use.id}}</td>
+      <td>{{use.Nombres}}</td>
+      <td>{{use.Apeidos}}</td>
+      <td>{{use.Edad}}</td>
+      <td>{{use.Pesoi}}</td>
+      <td>{{use.Sexo}}</td>
+
+    </tr>
+  {%empty%}
+    <li>No hay libros en existencia!</li>
+  {%endfor%}
+</ul>
+      </tbody>
+
+</table>
+</div>
+
+
+{%endblock %}

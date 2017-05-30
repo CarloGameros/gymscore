@@ -1,0 +1,10 @@
+{% load static %}
+<h1>{{titulo}}</h1>
+
+    <form role="form" action="" method="post" class="login-form">{% csrf_token %}
+      <div class="form-group">
+      <label for="">{{titulo}}</label>
+      {{form.as_p}}
+      <input type="submit" class ="btn btn-warning "name="" value="{{submit_btn}}">
+
+    </form>
